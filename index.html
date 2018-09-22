@@ -23,9 +23,6 @@
     <h1>The Room</h1>
     <div class="DisplayQuestion"></div>
         <div class="AnswerButton"></div>
-        <div class="AnswerButton"></div>
-        <div class="AnswerButton"></div>
-        <div class="AnswerButton"></div>
 
 
 <script type="text/javascript">
@@ -53,10 +50,10 @@ var RoomQuestions = {
         }
     },
     Question2: {
-        Question: 'Why does Chris R come looking for money?',
+        Question: 'Why does Chris R come looking for money from Denny?',
         Answer: {
             Answer1: {
-                Answer: "Drugs",
+                Answer: "Denny used the money to buy drugs",
                 Correct: 1
             },
             Answer2: {
@@ -64,7 +61,7 @@ var RoomQuestions = {
                 Correct: 0
             },
             Answer3: {
-                Answer: "What kind of drugs",
+                Answer: "He thought Denny stole his money",
                 Correct: 0
             },
             Answer4: {
@@ -81,7 +78,7 @@ var RoomQuestions = {
                 Correct: 1
             },
             Answer2: {
-                Answer: "Johnny Depp?",
+                Answer: "Johnny Depp",
                 Correct: 0
             },
             Answer3: {
@@ -128,18 +125,31 @@ function resetGame() {
 
 resetGame();
 
-
+// Display Question
 $( ".DisplayQuestion" ).append( "<p>" + QuestionsArrayGame[0]["Question"] + "</p>" );
 
+// Display Answers
+for (var j = 0; j < 4; j++) {
+    var DisplayQuestions = [QuestionsArrayGame[0].Answer.Answer1.Answer,QuestionsArrayGame[0].Answer.Answer2.Answer,QuestionsArrayGame[0].Answer.Answer3.Answer,QuestionsArrayGame[0].Answer.Answer4.Answer];
+    var StoreCorrectAnswer = [QuestionsArrayGame[0].Answer.Answer1.Correct,QuestionsArrayGame[0].Answer.Answer2.Correct,QuestionsArrayGame[0].Answer.Answer3.Correct,QuestionsArrayGame[0].Answer.Answer4.Correct];
+    var DisplayButton = $("<button>");
+        DisplayButton.attr("type", "button");
+        DisplayButton.text(DisplayQuestions[j]);
+        DisplayButton.attr("Valid",StoreCorrectAnswer[j]);
+        DisplayButton.addClass("EachAnswer")
+        $(".AnswerButton").append(DisplayButton);
+}
 
-function displaybuttons () {
-var AnswersArray = [QuestionsArrayGame[0].Answer.Answer1.Answer,QuestionsArrayGame[0].Answer.Answer2.Answer,QuestionsArrayGame[0].Answer.Answer3.Answer,QuestionsArrayGame[0].Answer.Answer4.Answer];
-
-$( ".AnswerButton" ).each(function( index ) {
-  console.log( AnswersArray[index]);
+$( ".EachAnswer" ).click(function() {
+  alert( "huh" );
 });
 
-}
+
+
+
+
+
+
 
 
 </script>
