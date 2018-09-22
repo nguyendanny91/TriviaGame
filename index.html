@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+          The Room Trivia Game
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Linking CSS Reset File -->
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!-- Linking CSS -->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <!-- Added link to the jQuery Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+      </head>
+
+
+<body>
+
+    <h1>The Room</h1>
+    <div class="DisplayQuestion"></div>
+        <div class="AnswerButton"></div>
+        <div class="AnswerButton"></div>
+        <div class="AnswerButton"></div>
+        <div class="AnswerButton"></div>
+
+
+<script type="text/javascript">
+// Answers
+var RoomQuestions = {
+    Question1: {
+        Question: 'Who is Lisa having an affair with?',
+        Answer: {
+            Answer1: {
+                Answer: "Mark",
+                Correct: 1
+            },
+            Answer2: {
+                Answer: "Johnny",
+                Correct: 0
+            },
+            Answer3: {
+                Answer: "Denny",
+                Correct: 0
+            },
+            Answer4: {
+                Answer: "Peter",
+                Correct: 0
+            }
+        }
+    },
+    Question2: {
+        Question: 'Why does Chris R come looking for money?',
+        Answer: {
+            Answer1: {
+                Answer: "Drugs",
+                Correct: 1
+            },
+            Answer2: {
+                Answer: "What kind of money?",
+                Correct: 0
+            },
+            Answer3: {
+                Answer: "What kind of drugs",
+                Correct: 0
+            },
+            Answer4: {
+                Answer: "He borrowed some to pay off a student loan",
+                Correct: 0
+            }
+        }
+    },
+    Question3: {
+        Question: 'Who plays Tommy Wiseau in the 2017 biography/comedy of The Room, The Disaster Artist?',
+        Answer: {
+            Answer1: {
+                Answer: "James Franco",
+                Correct: 1
+            },
+            Answer2: {
+                Answer: "Johnny Depp?",
+                Correct: 0
+            },
+            Answer3: {
+                Answer: "Hugh Jackman",
+                Correct: 0
+            },
+            Answer4: {
+                Answer: "Greg Sestero",
+                Correct: 0
+            }
+        }
+    }
+}
+
+// Count Totals
+var Correct = 0;
+var Incorrect = 0;
+var Unanswered = 0;
+var QuestionsArrayGameDefault = [RoomQuestions.Question1,RoomQuestions.Question2,RoomQuestions.Question3]
+var QuestionsArrayGame = QuestionsArrayGameDefault;
+var QuestionsArrayLength = QuestionsArrayGame.length;
+
+
+//RandomizeQuestions
+function resetGame() {
+
+// Set Totals to 0
+    Correct = 0;
+    Incorrect = 0;
+    Unanswered = 0;
+
+// Randomize Questions
+    QuestionsArrayLength = QuestionsArrayGame.length;
+
+    for (var i = 1; i < QuestionsArrayGame.length; i++) {
+        var index = Math.floor(Math.random() * QuestionsArrayLength);
+        QuestionsArrayLength --;
+
+        var temp = QuestionsArrayGame[QuestionsArrayLength];
+        QuestionsArrayGame[QuestionsArrayLength] = QuestionsArrayGame[index];
+        QuestionsArrayGame[index] = temp;
+    }
+    }
+
+resetGame();
+
+
+$( ".DisplayQuestion" ).append( "<p>" + QuestionsArrayGame[0]["Question"] + "</p>" );
+
+
+function displaybuttons () {
+var AnswersArray = [QuestionsArrayGame[0].Answer.Answer1.Answer,QuestionsArrayGame[0].Answer.Answer2.Answer,QuestionsArrayGame[0].Answer.Answer3.Answer,QuestionsArrayGame[0].Answer.Answer4.Answer];
+
+$( ".AnswerButton" ).each(function( index ) {
+  console.log( AnswersArray[index]);
+});
+
+}
+
+
+</script>
+
+</body>
+</html>
