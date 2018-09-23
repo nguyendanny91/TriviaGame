@@ -21,7 +21,9 @@
 <body>
 
     <h1>The Room</h1>
+    <div class="DisplayStart"></div>
     <div class="DisplayQuestion"></div>
+    <div class="DisplayTimer"></div>
         <div class="AnswerButton"></div>
 
 
@@ -100,7 +102,46 @@ var Unanswered = 0;
 var QuestionsArrayGameDefault = [RoomQuestions.Question1,RoomQuestions.Question2,RoomQuestions.Question3]
 var QuestionsArrayGame = QuestionsArrayGameDefault;
 var QuestionsArrayLength = QuestionsArrayGame.length;
+var SetTimer = 5;
+var QuestionTimer
+var DisplayTimer
 
+//Display Start Button
+var startButton = $("<button>");
+    startButton.text("Start Game");
+    startButton.addClass("StartClass");
+    $(".DisplayStart").append(startButton);
+
+
+
+//DisplayTimer
+function DTimer() {
+    SetTimer = 5;
+    var timer = $(".DisplayTimer")
+
+    function timeIt () {
+        SetTimer--;
+    timer.text(SetTimer)
+    }
+
+    DisplayTimer = setInterval(timeIt,1000);
+    }
+
+function QTimer() {
+    QuestionTimer = setInterval(function()
+    { alert("TOO LATE!"); 
+    }, 5000); // set this to 30 seconds
+    }
+
+function resetTimer() {
+    DTimer();
+    QTimer();
+}
+
+function clearTimers() {
+    clearTimeout(QuestionTimer);
+    clearTimeout(DisplayTimer);
+    }
 
 //RandomizeQuestions
 function resetGame() {
@@ -111,6 +152,7 @@ function resetGame() {
     Unanswered = 0;
 
 // Randomize Questions
+    QuestionsArrayGame = QuestionsArrayGameDefault;
     QuestionsArrayLength = QuestionsArrayGame.length;
 
     for (var i = 1; i < QuestionsArrayGame.length; i++) {
@@ -125,24 +167,79 @@ function resetGame() {
 
 resetGame();
 
-// Display Question
-$( ".DisplayQuestion" ).append( "<p>" + QuestionsArrayGame[0]["Question"] + "</p>" );
+// Clear Questions
+function removeAnswers() {
+    $(".EachAnswer").remove();
+    }
 
-// Display Answers
-for (var j = 0; j < 4; j++) {
-    var DisplayQuestions = [QuestionsArrayGame[0].Answer.Answer1.Answer,QuestionsArrayGame[0].Answer.Answer2.Answer,QuestionsArrayGame[0].Answer.Answer3.Answer,QuestionsArrayGame[0].Answer.Answer4.Answer];
-    var StoreCorrectAnswer = [QuestionsArrayGame[0].Answer.Answer1.Correct,QuestionsArrayGame[0].Answer.Answer2.Correct,QuestionsArrayGame[0].Answer.Answer3.Correct,QuestionsArrayGame[0].Answer.Answer4.Correct];
-    var DisplayButton = $("<button>");
-        DisplayButton.attr("type", "button");
-        DisplayButton.text(DisplayQuestions[j]);
-        DisplayButton.attr("Valid",StoreCorrectAnswer[j]);
-        DisplayButton.addClass("EachAnswer")
-        $(".AnswerButton").append(DisplayButton);
+// Function to display Questions 
+
+
+// Randomize Answers
+function randomizeAnswers() {
+    var AnswersArrayGameDefault = [QuestionsArrayGame[0].Answer.Answer1,QuestionsArrayGame[0].Answer.Answer2,QuestionsArrayGame[0].Answer.Answer3,QuestionsArrayGame[0].Answer.Answer4];
+    var AnswersArrayGame = AnswersArrayGameDefault;
+    AnswersArrayLength = AnswersArrayGame.length;
+
+    AnswersArrayLength = AnswersArrayGame.length;
+
+    for (var i = 1; i < AnswersArrayGame.length; i++) {
+        var index = Math.floor(Math.random() * AnswersArrayLength);
+        AnswersArrayLength --;
+
+        var temp = AnswersArrayGame[AnswersArrayLength];
+        AnswersArrayGame[AnswersArrayLength] = AnswersArrayGame[index];
+        AnswersArrayGame[index] = temp;
+    }
 }
+    
+    // Display Question
+    $( ".DisplayQuestion" ).append( "<p>" + QuestionsArrayGame[0]["Question"] + "</p>" );
 
-$( ".EachAnswer" ).click(function() {
-  alert( "huh" );
+
+    // Display Answers
+    for (var j = 0; j < 4; j++) {
+        var DisplayQuestions = [AnswersArrayGame[0].Answer,AnswersArrayGame[1].Answer,AnswersArrayGame[2].Answer,AnswersArrayGame[3].Answer];
+        var StoreCorrectAnswer = [AnswersArrayGame[0].Correct,AnswersArrayGame[1].Correct,AnswersArrayGame[2].Correct,AnswersArrayGame[3].Correct];
+        var DisplayButton = $("<button>");
+            DisplayButton.attr("type", "button");
+            DisplayButton.text(DisplayQuestions[j]);
+            DisplayButton.attr("Valid",StoreCorrectAnswer[j]);
+            DisplayButton.addClass("EachAnswer")
+            $(".AnswerButton").append(DisplayButton);
+    }
+
+    QuestionsArrayGame.shift();
+
+    
+
+
+$(".DisplayStart").click(function() {
+$(".DisplayStart").remove();
+setQuestion();
+resetTimer();
 });
+
+
+$(".EachAnswer").click(function() {
+    var valid = ($(this).attr("valid"));
+    
+   if (valid == 1) {
+       alert("Good");
+       clearTimers();
+       removeAnswers();
+       setQuestion();
+   }
+   else {
+       alert("Bad");
+       clearTimers();
+       removeAnswers();
+       setQuestion();
+   }
+
+    });
+
+
 
 
 
