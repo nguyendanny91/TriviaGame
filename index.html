@@ -49,7 +49,8 @@ var RoomQuestions = {
                 Answer: "Peter",
                 Correct: 0
             }
-        }
+        },
+        Image: "http://1.bp.blogspot.com/-yQl4yJ6t6VI/VUcnpnRU-UI/AAAAAAAAN9w/JZH8dlQmJ5o/s1600/0SzxAHy.gif"
     },
     Question2: {
         Question: 'Why does Chris R come looking for money from Denny?',
@@ -70,7 +71,8 @@ var RoomQuestions = {
                 Answer: "He borrowed some to pay off a student loan",
                 Correct: 0
             }
-        }
+        },
+        Image: "http://3.bp.blogspot.com/-oDsyAvehTT0/VULLycp1abI/AAAAAAAAN8I/U0V2uTQooWk/s1600/tumblr_nn4m25ZkPZ1rskk8io2_250.gif"
     },
     Question3: {
         Question: 'Who plays Tommy Wiseau in the 2017 biography/comedy of The Room, The Disaster Artist?',
@@ -91,7 +93,162 @@ var RoomQuestions = {
                 Answer: "Greg Sestero",
                 Correct: 0
             }
-        }
+        },
+        Image: "https://i.giphy.com/media/xT9IgpbAFGKzPYYHkY/giphy.webp"
+    },
+    Question4: {
+        Question: 'Why did Johnny not get the promotion?',
+        Answer: {
+            Answer1: {
+                Answer: "He was betrayed and tricked although he worked very hard",
+                Correct: 1
+            },
+            Answer2: {
+                Answer: "He was caught cheating on Lisa",
+                Correct: 0
+            },
+            Answer3: {
+                Answer: "Mark was promoted instead",
+                Correct: 0
+            },
+            Answer4: {
+                Answer: "He decided to retire to take care of Lisa",
+                Correct: 0
+            }
+        },
+        Image: "http://1.bp.blogspot.com/-5E-um-dZQnY/VUckjhAsqzI/AAAAAAAAN9c/5_hs-tR9qvE/s1600/eIFH6uj.gif"
+    },
+    Question5: {
+        Question: 'What sport does the Johnny and friends play?',
+        Answer: {
+            Answer1: {
+                Answer: "Football",
+                Correct: 1
+            },
+            Answer2: {
+                Answer: "Catch",
+                Correct: 0
+            },
+            Answer3: {
+                Answer: "Rugby",
+                Correct: 0
+            },
+            Answer4: {
+                Answer: "Tag",
+                Correct: 0
+            }
+        },
+        Image: "http://3.bp.blogspot.com/-uxKfcKzWzxs/VULGpmo9emI/AAAAAAAAN7w/ll7Z12aMSRk/s1600/tumblr_nms4wqP0k81urli1fo1_400.gif"
+    },
+    Question6: {
+        Question: 'What sound does a chicken make?',
+        Answer: {
+            Answer1: {
+                Answer: "Cheep Cheep Cheep",
+                Correct: 1
+            },
+            Answer2: {
+                Answer: "Bark",
+                Correct: 0
+            },
+            Answer3: {
+                Answer: "Cluck cluck cluck",
+                Correct: 0
+            },
+            Answer4: {
+                Answer: "Meoooow",
+                Correct: 0
+            }
+        },
+        Image: "https://i.giphy.com/media/3o752abrTmtXGTRcxa/giphy.webp"
+    },
+    Question7: {
+        Question: 'Did Johnny hit Lisa?',
+        Answer: {
+            Answer1: {
+                Answer: "It's B.S. He did not hit her. He did noooot.",
+                Correct: 1
+            },
+            Answer2: {
+                Answer: "Oh, Hi Mark.",
+                Correct: 0
+            },
+            Answer3: {
+                Answer: "Yes he hit her.",
+                Correct: 0
+            },
+            Answer4: {
+                Answer: "No he was too busy at his job at the computer business.",
+                Correct: 0
+            }
+        },
+        Image: "https://i.giphy.com/media/d3OFVt1q8Cxhtv8c/giphy.webp"
+    },
+    Question8: {
+        Question: "Why did Johnny not get the promotion?",
+        Answer: {
+            Answer1: {
+                Answer: "He was betrayed and tricked although he worked very hard",
+                Correct: 1
+            },
+            Answer2: {
+                Answer: "He was caught cheating on Lisa",
+                Correct: 0
+            },
+            Answer3: {
+                Answer: "Mark was promoted instead",
+                Correct: 0
+            },
+            Answer4: {
+                Answer: "He decided to retire to take care of Lisa",
+                Correct: 0
+            }
+        },
+        Image: "http://1.bp.blogspot.com/-yQl4yJ6t6VI/VUcnpnRU-UI/AAAAAAAAN9w/JZH8dlQmJ5o/s1600/0SzxAHy.gif"
+    },
+    Question9: {
+        Question: "Who directed, produced, wrote and starred in cult classic 'The Room'?",
+        Answer: {
+            Answer1: {
+                Answer: "Tommy Wiseau",
+                Correct: 1
+            },
+            Answer2: {
+                Answer: "Amari Cooper, Saquaon Barkley, Marshawn Lynch, and Jesse James",
+                Correct: 0
+            },
+            Answer3: {
+                Answer: "Tom Hanks",
+                Correct: 0
+            },
+            Answer4: {
+                Answer: "Lizzy McGuire",
+                Correct: 0
+            }
+        },
+        Image: "https://i.giphy.com/media/12SWAjro318CqI/giphy.webp"
+    },
+    Question10: {
+        Question: "What is Lisa's mother suffering from?",
+        Answer: {
+            Answer1: {
+                Answer: "Breast Cancer",
+                Correct: 1
+            },
+            Answer2: {
+                Answer: "Alcholism",
+                Correct: 0
+            },
+            Answer3: {
+                Answer: "Steroid Abuse",
+                Correct: 0
+            },
+            Answer4: {
+                Answer: "All of the Above",
+                Correct: 0
+            }
+        },
+        Image: "https://i0.wp.com/badbooksgoodtimes.com/wp-content/uploads/2018/01/the-room-breast-cancer.gif"
     }
 }
 
@@ -99,12 +256,17 @@ var RoomQuestions = {
 var Correct = 0;
 var Incorrect = 0;
 var Unanswered = 0;
-var QuestionsArrayGameDefault = [RoomQuestions.Question1,RoomQuestions.Question2,RoomQuestions.Question3]
+var QuestionsArrayGameDefault = [RoomQuestions.Question1,RoomQuestions.Question2,RoomQuestions.Question3,RoomQuestions.Question4,RoomQuestions.Question5,RoomQuestions.Question6,RoomQuestions.Question7,RoomQuestions.Question8,RoomQuestions.Question9,RoomQuestions.Question10]
 var QuestionsArrayGame = QuestionsArrayGameDefault;
 var QuestionsArrayLength = QuestionsArrayGame.length;
 var SetTimer = 5;
-var QuestionTimer
-var DisplayTimer
+var QuestionTimer;
+var DisplayTimer;
+var CorrectTimer;
+var AnswersArrayGame;
+var StoreCorrectAnswer;
+var StoreCorrectImage;
+var valid;
 
 //Display Start Button
 var startButton = $("<button>");
@@ -116,7 +278,7 @@ var startButton = $("<button>");
 
 //DisplayTimer
 function DTimer() {
-    SetTimer = 5;
+    SetTimer = 10;
     var timer = $(".DisplayTimer")
 
     function timeIt () {
@@ -129,9 +291,33 @@ function DTimer() {
 
 function QTimer() {
     QuestionTimer = setInterval(function()
-    { alert("TOO LATE!"); 
-    }, 5000); // set this to 30 seconds
+    { 
+        
+    Unanswered ++;
+    var DisplayCorrectImg  = $("<p>");
+    var DisplayImg = $("<img>")
+    DisplayCorrectImg.text("Too Late! The answer was: " + StoreCorrectAnswer);
+    DisplayCorrectImg.addClass("TxtQuestionClass");
+    $(".QuestionTxt").append(DisplayCorrectImg);
+    DisplayImg.addClass("ImgClass");
+    DisplayImg.attr("src",StoreCorrectImage);
+    $(".TxtQuestionClass").append(DisplayImg);
+    
+    clearTimers();
+
+    CATimer();
+
+    alert("TOO LATE!"); 
+
+    }, 10000); // set this to 30 seconds
     }
+
+function CATimer() {
+    CorrectTimer = setInterval(function()
+    {
+    QuestionAnswer();
+    }, 5000);
+}
 
 function resetTimer() {
     DTimer();
@@ -167,19 +353,13 @@ function resetGame() {
 
 resetGame();
 
-// Clear Questions
-function removeAnswers() {
-    $(".EachAnswer").remove();
-    }
-
-// Function to display Questions 
-
-
 // Randomize Answers
 function randomizeAnswers() {
     var AnswersArrayGameDefault = [QuestionsArrayGame[0].Answer.Answer1,QuestionsArrayGame[0].Answer.Answer2,QuestionsArrayGame[0].Answer.Answer3,QuestionsArrayGame[0].Answer.Answer4];
-    var AnswersArrayGame = AnswersArrayGameDefault;
+    AnswersArrayGame = AnswersArrayGameDefault;
     AnswersArrayLength = AnswersArrayGame.length;
+    StoreCorrectAnswer = QuestionsArrayGame[0].Answer.Answer1.Answer;
+    StoreCorrectImage = QuestionsArrayGame[0].Image;
 
     AnswersArrayLength = AnswersArrayGame.length;
 
@@ -193,53 +373,133 @@ function randomizeAnswers() {
     }
 }
     
-    // Display Question
-    $( ".DisplayQuestion" ).append( "<p>" + QuestionsArrayGame[0]["Question"] + "</p>" );
+// Display Question and Answers
+
+function QuestionAnswer() {
+    if (Correct + Incorrect + Unanswered < 10) {
+        // Randomize Answers
+        randomizeAnswers();
+        // Remove Questions and Answers
+        $(".QuestionTxt").remove();
+        $(".EachAnswer").remove();
+
+        // Clear CorrectTimer
+        clearTimeout(CorrectTimer);
+
+        // Reset Timer
+        resetTimer()
+
+        // Display Question
+        var QuestionText = $("<p>");
+        QuestionText.text(QuestionsArrayGame[0]["Question"]);
+        QuestionText.addClass("QuestionTxt")
+        $(".DisplayQuestion").append(QuestionText);
 
 
-    // Display Answers
-    for (var j = 0; j < 4; j++) {
-        var DisplayQuestions = [AnswersArrayGame[0].Answer,AnswersArrayGame[1].Answer,AnswersArrayGame[2].Answer,AnswersArrayGame[3].Answer];
-        var StoreCorrectAnswer = [AnswersArrayGame[0].Correct,AnswersArrayGame[1].Correct,AnswersArrayGame[2].Correct,AnswersArrayGame[3].Correct];
-        var DisplayButton = $("<button>");
-            DisplayButton.attr("type", "button");
-            DisplayButton.text(DisplayQuestions[j]);
-            DisplayButton.attr("Valid",StoreCorrectAnswer[j]);
-            DisplayButton.addClass("EachAnswer")
-            $(".AnswerButton").append(DisplayButton);
+        // Display Answers
+            for (var j = 0; j < 4; j++) {
+                var DisplayQuestions = [AnswersArrayGame[0].Answer,AnswersArrayGame[1].Answer,AnswersArrayGame[2].Answer,AnswersArrayGame[3].Answer];
+                var StoreCorrectAnswer = [AnswersArrayGame[0].Correct,AnswersArrayGame[1].Correct,AnswersArrayGame[2].Correct,AnswersArrayGame[3].Correct];
+                var DisplayButton = $("<button>");
+                    DisplayButton.attr("type", "button");
+                    DisplayButton.text(DisplayQuestions[j]);
+                    DisplayButton.attr("Valid",StoreCorrectAnswer[j]);
+                    DisplayButton.addClass("EachAnswer")
+                    $(".AnswerButton").append(DisplayButton);
+            }
+
+        QuestionsArrayGame.shift();
+
+        selectAnswer();
     }
 
-    QuestionsArrayGame.shift();
+    else {
+        clearTimers();
+        clearTimeout(CorrectTimer);
+        tryAgain();
+    }
+}
 
-    
 
-
-$(".DisplayStart").click(function() {
-$(".DisplayStart").remove();
-setQuestion();
-resetTimer();
+$(".StartClass").click(function() {
+$(".StartClass").remove();
+QuestionAnswer();
 });
 
-
-$(".EachAnswer").click(function() {
-    var valid = ($(this).attr("valid"));
-    
-   if (valid == 1) {
-       alert("Good");
-       clearTimers();
-       removeAnswers();
-       setQuestion();
-   }
-   else {
-       alert("Bad");
-       clearTimers();
-       removeAnswers();
-       setQuestion();
-   }
+function selectAnswer() {
+    $(".EachAnswer").click(function() {
+        valid = ($(this).attr("valid"));
+        
+    if (valid == 1) {
+        alert("Good");
+        Correct ++;
+        clearTimers();
+        DisplayCorrectImage();
+        CATimer();
+    }
+    else {
+        alert("Bad");
+        Incorrect ++;
+        clearTimers();
+        DisplayCorrectImage();
+        CATimer();
+    }
 
     });
+}
 
+function DisplayCorrectImage() {
+    $(".EachAnswer").remove();
+    var DisplayCorrectImg  = $("<p>");
+    var DisplayImg = $("<img>")
+    if (valid == 1) {
+            DisplayCorrectImg.text("Correct! The answer was: " + StoreCorrectAnswer);
+        }
+        else {
+            DisplayCorrectImg.text("Incorrect! The answer was: " + StoreCorrectAnswer);
+        }
+    DisplayCorrectImg.addClass("TxtQuestionClass");
+    $(".QuestionTxt").append(DisplayCorrectImg);
+    
+    DisplayImg.addClass("ImgClass");
+    DisplayImg.attr("src",StoreCorrectImage);
+    $(".TxtQuestionClass").append(DisplayImg);
 
+}
+
+function tryAgain() {
+    $(".QuestionTxt").remove();
+    $(".EachAnswer").remove();
+    var DisplayCorrect = $("<p>");
+        DisplayCorrect.addClass("CorrectClass");
+        DisplayCorrect.text("Correct: " + Correct);
+    $(".DisplayStart").append(DisplayCorrect);
+    
+    var DisplayIncorrect = $("<p>");
+        DisplayIncorrect.addClass("IncorrectClass");
+        DisplayIncorrect.text("Incorrect: " + Incorrect);
+    $(".DisplayStart").append(DisplayIncorrect);
+
+        var DisplayUnanswered = $("<p>");
+        DisplayUnanswered.addClass("UnansweredClass");
+        DisplayUnanswered.text("Unanswered: " + Unanswered);
+    $(".DisplayStart").append(DisplayUnanswered);
+
+    var restartGame = $("<button>");
+        restartGame.text("Let's Play Again!");
+        restartGame.addClass("RestartClass");
+        $(".DisplayQuestion").append(restartGame);
+
+    $(".RestartClass").click(function() {
+    $(".CorrectClass").remove();
+    $(".IncorrectClass").remove();
+    $(".UnansweredClass").remove();
+    $(".RestartClass").remove();
+    resetGame();
+    QuestionAnswer();
+    });
+
+    }
 
 
 
