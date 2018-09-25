@@ -19,13 +19,33 @@
 
 
 <body>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-4">The Room Trivia Game!</h1> 
+                <p class="lead">Johnny is a successful banker who lives happily in a San Francisco townhouse with his fiancée, Lisa. One day, inexplicably, she gets bored of him and decides to seduce Johnny's best friend, Mark. From there, nothing will be the same again.</p>
+            </div>
+        </div>
+        <div class="container">
+                <div class="row">
+                
+                    <p class="lead DisplayTimer"></p>
 
-    <h1>The Room</h1>
-    <div class="DisplayStart"></div>
-    <div class="DisplayQuestion"></div>
-    <div class="DisplayTimer"></div>
-        <div class="AnswerButton"></div>
+                    <div class="col-lg-12 Center">
+                        <div class="DisplayQuestion"></div>
+                    </div> 
+                </div>
+                <div class="Center row StartFooter">
+                    <div class="DisplayStart"></div>
+                </div>
 
+                <div class="row Center">
+                    <div class="AnswerButton"></div>
+                </div>
+        </div> 
+    </div>  
+
+    
 
 <script type="text/javascript">
 // Answers
@@ -119,7 +139,7 @@ var RoomQuestions = {
         Image: "http://1.bp.blogspot.com/-5E-um-dZQnY/VUckjhAsqzI/AAAAAAAAN9c/5_hs-tR9qvE/s1600/eIFH6uj.gif"
     },
     Question5: {
-        Question: 'What sport does the Johnny and friends play?',
+        Question: 'What sport does Johnny and friends play?',
         Answer: {
             Answer1: {
                 Answer: "Football",
@@ -249,6 +269,28 @@ var RoomQuestions = {
             }
         },
         Image: "https://i0.wp.com/badbooksgoodtimes.com/wp-content/uploads/2018/01/the-room-breast-cancer.gif"
+    },
+    Question11: {
+        Question: "When Johnny walks into the flower shop, who does he say hello to?",
+        Answer: {
+            Answer1: {
+                Answer: "The florist and dog",
+                Correct: 1
+            },
+            Answer2: {
+                Answer: "The dog",
+                Correct: 0
+            },
+            Answer3: {
+                Answer: "The florist only",
+                Correct: 0
+            },
+            Answer4: {
+                Answer: "Neither",
+                Correct: 0
+            }
+        },
+        Image: "https://thumbs.gfycat.com/VacantGloomyAmurratsnake.webp"
     }
 }
 
@@ -256,7 +298,7 @@ var RoomQuestions = {
 var Correct = 0;
 var Incorrect = 0;
 var Unanswered = 0;
-var QuestionsArrayGameDefault = [RoomQuestions.Question1,RoomQuestions.Question2,RoomQuestions.Question3,RoomQuestions.Question4,RoomQuestions.Question5,RoomQuestions.Question6,RoomQuestions.Question7,RoomQuestions.Question8,RoomQuestions.Question9,RoomQuestions.Question10]
+var QuestionsArrayGameDefault = [RoomQuestions.Question1,RoomQuestions.Question2,RoomQuestions.Question3,RoomQuestions.Question4,RoomQuestions.Question5,RoomQuestions.Question6,RoomQuestions.Question7,RoomQuestions.Question8,RoomQuestions.Question9,RoomQuestions.Question10,RoomQuestions.Question11];
 var QuestionsArrayGame = QuestionsArrayGameDefault;
 var QuestionsArrayLength = QuestionsArrayGame.length;
 var SetTimer = 5;
@@ -278,12 +320,12 @@ var startButton = $("<button>");
 
 //DisplayTimer
 function DTimer() {
-    SetTimer = 10;
+    SetTimer = 15;
     var timer = $(".DisplayTimer")
 
     function timeIt () {
         SetTimer--;
-    timer.text(SetTimer)
+    timer.text("Time Remaining: " + SetTimer)
     }
 
     DisplayTimer = setInterval(timeIt,1000);
@@ -296,20 +338,20 @@ function QTimer() {
     Unanswered ++;
     var DisplayCorrectImg  = $("<p>");
     var DisplayImg = $("<img>")
+    $(".EachAnswer").remove()
     DisplayCorrectImg.text("Too Late! The answer was: " + StoreCorrectAnswer);
     DisplayCorrectImg.addClass("TxtQuestionClass");
     $(".QuestionTxt").append(DisplayCorrectImg);
     DisplayImg.addClass("ImgClass");
     DisplayImg.attr("src",StoreCorrectImage);
-    $(".TxtQuestionClass").append(DisplayImg);
+    $(".QuestionTxt").append(DisplayImg);
     
     clearTimers();
 
     CATimer();
 
-    alert("TOO LATE!"); 
 
-    }, 10000); // set this to 30 seconds
+    }, 15000); 
     }
 
 function CATimer() {
@@ -338,7 +380,7 @@ function resetGame() {
     Unanswered = 0;
 
 // Randomize Questions
-    QuestionsArrayGame = QuestionsArrayGameDefault;
+    QuestionsArrayGame = [RoomQuestions.Question1,RoomQuestions.Question2,RoomQuestions.Question3,RoomQuestions.Question4,RoomQuestions.Question5,RoomQuestions.Question6,RoomQuestions.Question7,RoomQuestions.Question8,RoomQuestions.Question9,RoomQuestions.Question10,RoomQuestions.Question11];
     QuestionsArrayLength = QuestionsArrayGame.length;
 
     for (var i = 1; i < QuestionsArrayGame.length; i++) {
@@ -424,6 +466,7 @@ function QuestionAnswer() {
 $(".StartClass").click(function() {
 $(".StartClass").remove();
 QuestionAnswer();
+
 });
 
 function selectAnswer() {
@@ -463,7 +506,7 @@ function DisplayCorrectImage() {
     
     DisplayImg.addClass("ImgClass");
     DisplayImg.attr("src",StoreCorrectImage);
-    $(".TxtQuestionClass").append(DisplayImg);
+    $(".QuestionTxt").append(DisplayImg);
 
 }
 
@@ -500,6 +543,21 @@ function tryAgain() {
     });
 
     }
+
+  $(document).ready(function() {
+  var obj = document.createElement("audio");
+  obj.src = "assets/images/soundtrack.mp3";
+  obj.volume = 1;
+  obj.autoPlay = false;
+  obj.preLoad = true;
+  obj.controls = true;
+
+  $(".StartClass").click(function() {
+    obj.play();
+    // obj.pause();
+  });
+});
+
 
 
 

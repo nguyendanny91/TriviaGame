@@ -1,0 +1,45 @@
+.Center {
+    justify-content: center;
+    text-align: center;
+}
+
+.DisplayTimer {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.AnswerButton {
+    display: flex;
+    flex-direction: column;
+}
+
+.EachAnswer {
+    margin: 1em;
+}
+
+.TxtQuestionClass {
+    font-size: 1.4em;
+    margin: 1em;
+}
+
+.ImgClass {
+    margin: 1em;
+    justify-content: center;
+}
+
+.DisplayQuestion {
+    font-size: 2em;
+}
+
+body {
+    background-image: url("../images/background.jpg");
+    opacity: .9;
+}
+
+.container {
+    background-color: #e9ecef;
+}
+
+.StartFooter {
+    margin-bottom: 5em;
+}
