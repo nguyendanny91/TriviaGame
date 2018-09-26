@@ -23,7 +23,7 @@ var RoomQuestions = {
                 Correct: 0
             }
         },
-        Image: "http://1.bp.blogspot.com/-yQl4yJ6t6VI/VUcnpnRU-UI/AAAAAAAAN9w/JZH8dlQmJ5o/s1600/0SzxAHy.gif"
+        Image: "assets/images/1.gif"
     },
     Question2: {
         Question: 'Why does Chris R come looking for money from Denny?',
@@ -45,7 +45,7 @@ var RoomQuestions = {
                 Correct: 0
             }
         },
-        Image: "http://3.bp.blogspot.com/-oDsyAvehTT0/VULLycp1abI/AAAAAAAAN8I/U0V2uTQooWk/s1600/tumblr_nn4m25ZkPZ1rskk8io2_250.gif"
+        Image: "assets/images/2.gif"
     },
     Question3: {
         Question: 'Who plays Tommy Wiseau in the 2017 biography/comedy of The Room, The Disaster Artist?',
@@ -67,7 +67,7 @@ var RoomQuestions = {
                 Correct: 0
             }
         },
-        Image: "https://i.giphy.com/media/xT9IgpbAFGKzPYYHkY/giphy.webp"
+        Image: "assets/images/3.webp"
     },
     Question4: {
         Question: 'Why did Johnny not get the promotion?',
@@ -89,7 +89,7 @@ var RoomQuestions = {
                 Correct: 0
             }
         },
-        Image: "http://1.bp.blogspot.com/-5E-um-dZQnY/VUckjhAsqzI/AAAAAAAAN9c/5_hs-tR9qvE/s1600/eIFH6uj.gif"
+        Image: "assets/images/4.gif"
     },
     Question5: {
         Question: 'What sport does Johnny and friends play?',
@@ -111,7 +111,7 @@ var RoomQuestions = {
                 Correct: 0
             }
         },
-        Image: "http://3.bp.blogspot.com/-uxKfcKzWzxs/VULGpmo9emI/AAAAAAAAN7w/ll7Z12aMSRk/s1600/tumblr_nms4wqP0k81urli1fo1_400.gif"
+        Image: "assets/images/5.gif"
     },
     Question6: {
         Question: 'What sound does a chicken make?',
@@ -133,7 +133,7 @@ var RoomQuestions = {
                 Correct: 0
             }
         },
-        Image: "https://i.giphy.com/media/3o752abrTmtXGTRcxa/giphy.webp"
+        Image: "assets/images/6.webp"
     },
     Question7: {
         Question: 'Did Johnny hit Lisa?',
@@ -155,7 +155,7 @@ var RoomQuestions = {
                 Correct: 0
             }
         },
-        Image: "https://i.giphy.com/media/d3OFVt1q8Cxhtv8c/giphy.webp"
+        Image: "assets/images/7.webp"
     },
     Question8: {
         Question: "Why did Johnny not get the promotion?",
@@ -177,7 +177,7 @@ var RoomQuestions = {
                 Correct: 0
             }
         },
-        Image: "http://1.bp.blogspot.com/-yQl4yJ6t6VI/VUcnpnRU-UI/AAAAAAAAN9w/JZH8dlQmJ5o/s1600/0SzxAHy.gif"
+        Image: "assets/images/8.gif"
     },
     Question9: {
         Question: "Who directed, produced, wrote and starred in cult classic 'The Room'?",
@@ -199,7 +199,7 @@ var RoomQuestions = {
                 Correct: 0
             }
         },
-        Image: "https://i.giphy.com/media/12SWAjro318CqI/giphy.webp"
+        Image: "assets/images/9.webp"
     },
     Question10: {
         Question: "What is Lisa's mother suffering from?",
@@ -221,7 +221,7 @@ var RoomQuestions = {
                 Correct: 0
             }
         },
-        Image: "https://i0.wp.com/badbooksgoodtimes.com/wp-content/uploads/2018/01/the-room-breast-cancer.gif"
+        Image: "assets/images/10.gif"
     },
     Question11: {
         Question: "When Johnny walks into the flower shop, who does he say hello to?",
@@ -243,7 +243,7 @@ var RoomQuestions = {
                 Correct: 0
             }
         },
-        Image: "https://thumbs.gfycat.com/VacantGloomyAmurratsnake.webp"
+        Image: "assets/images/11.webp"
     }
 }
 
