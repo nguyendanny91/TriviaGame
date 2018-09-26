@@ -4,7 +4,7 @@
 }
 
 .DisplayTimer {
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
@@ -23,7 +23,6 @@
 }
 
 .ImgClass {
-    margin: 1em;
     justify-content: center;
 }
 
@@ -34,6 +33,10 @@
 body {
     background-image: url("../images/background.jpg");
     opacity: .9;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #e9ecef;
 }
 
 .container {
@@ -41,5 +44,9 @@ body {
 }
 
 .StartFooter {
-    margin-bottom: 5em;
+    margin-bottom: 1em;
+}
+
+.RestartClass {
+    font-size: 1em;
 }
